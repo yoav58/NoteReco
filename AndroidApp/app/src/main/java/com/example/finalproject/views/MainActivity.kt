@@ -19,5 +19,18 @@ class MainActivity : AppCompatActivity() {
             this, R.layout.login_page)
 
         binding.viewmodel = this.viewmodel
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
     }
 }
