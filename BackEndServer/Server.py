@@ -13,7 +13,19 @@ else:
 
 @app.route('/aut', methods=['POST'])
 def authentication():
-    userName = validUser(request.form['UserName'])
-    password = validUser(request.form['Password'])
-    answer = validUser(email,password)
-    return answer
+    print("get request")
+    print(request.form)
+    userName = request.form['username']
+    print("1")
+    password = request.form['password']
+    print("2")
+    answer = validUser(userName, password)
+    stringAnswer = "Wrong"
+    if answer:
+        stringAnswer = "Correct"
+        print(stringAnswer)
+    return stringAnswer
+
+@app.route("/")
+def enter():
+    return "hello"
